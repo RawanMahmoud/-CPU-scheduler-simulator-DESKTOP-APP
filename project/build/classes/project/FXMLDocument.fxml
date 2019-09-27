@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="705.0" prefWidth="738.0" style="-fx-background-color: #1a001a;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <VBox layoutX="399.0" layoutY="92.0">
+         <children>
+            <TableView fx:id="table" layoutX="398.0" layoutY="120.0" prefHeight="252.0" prefWidth="302.0">
+              <columns>
+                <TableColumn fx:id="name_id" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="CPUbrust_id" prefWidth="75.0" text="CPU Brust" />
+                  <TableColumn fx:id="arrival_id" prefWidth="75.0" text="Arrival Time" />
+                  <TableColumn fx:id="priority_id" prefWidth="75.0" text="Priority" />
+              </columns>
+               <effect>
+                  <ColorAdjust>
+                     <input>
+                        <ColorAdjust />
+                     </input>
+                  </ColorAdjust>
+               </effect>
+            </TableView>
+         </children>
+      </VBox>
+      <Label layoutX="268.0" layoutY="28.0" text="scheduler" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="124.0" text="No.of process" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="124.0" text="Brust" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="71.0" text="Process:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="438.0" text="Waiting Time" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="208.0" layoutY="438.0" text="Turnaround Time" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="31.0" layoutY="153.0" prefHeight="25.0" prefWidth="71.0" />
+      <TextField fx:id="brust" layoutX="135.0" layoutY="153.0" prefHeight="25.0" prefWidth="69.0" />
+      <TextField fx:id="waitingtime" layoutX="41.0" layoutY="464.0" prefHeight="38.0" prefWidth="116.0" />
+      <TextField fx:id="turnaroundtime" layoutX="208.0" layoutY="464.0" prefHeight="38.0" prefWidth="130.0" />
+      <CheckBox fx:id="priority" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" text="Priority" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <ComboBox fx:id="combobox_schedulers" layoutX="42.0" layoutY="296.0" prefHeight="30.0" prefWidth="200.0" promptText="Type of schedulers" />
+      <Button fx:id="button_ADD" layoutX="46.0" layoutY="365.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="69.0" text="ADD" textFill="#802517">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_clear" layoutX="148.0" layoutY="365.0" mnemonicParsing="false" text="Clear" textFill="#ee3a3a">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_run" layoutX="500.0" layoutY="362.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="100.0" text="RUN" textFill="#169a28">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="45.0" layoutY="261.0" text="Type of schedulers:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="538.0" text="Gantt Chart" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_arrivaltime" layoutX="234.0" layoutY="151.0" prefHeight="26.0" prefWidth="71.0" />
+      <TextField fx:id="txt_priority" layoutX="214.0" layoutY="218.0" prefHeight="30.0" prefWidth="71.0" />
+      <TextField fx:id="quantum_time" layoutX="257.0" layoutY="296.0" prefHeight="30.0" prefWidth="110.0" />
+      <Label layoutX="224.0" layoutY="124.0" text="Arrival Time" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="clear_all" layoutX="254.0" layoutY="365.0" mnemonicParsing="false" text="Clear All" textFill="#f51b1b">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="from_to" layoutX="417.0" layoutY="438.0" prefHeight="113.0" prefWidth="266.0" />
+      <Label fx:id="quantum_lbl" layoutX="256.0" layoutY="270.0" text="Quantum Time" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <BorderPane fx:id="borderPane" layoutY="569.0" prefHeight="206.0" prefWidth="745.0" style="-fx-background-color: #ffffff;" />
+    </children>
+</AnchorPane>
